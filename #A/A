@@ -1,0 +1,17 @@
+/*
+주석 : 이 코드는 최초 C 언어를 학습하기 위해 작성한 샘플입니다.
+Hello.C
+*/
+
+#include <stdio.h> // 헤더파일 설정 부분
+
+int main(void) 
+{
+	printf("Hello C World\n"); // printf : 출력 명령
+	printf("Gyokujin\n"); // \n : 한 줄 띄우기
+	printf("%d \n", 1234); // %d :해당 값을 변수로 저장하고 이후의 값 하나만 대입한다.
+	printf("%d %d \n", 10, 20);
+	printf("%f \n", 60);
+	printf("%s %d %f \n", "10", 10, 10);
+	return 0; // return : 반환 명령
+}
