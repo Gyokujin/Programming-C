@@ -1,0 +1,18 @@
+#include<stdio.h>
+
+int main()
+{
+	int numA = 4;
+	int numB = 10;
+	int numC = numA + numB;
+	printf("%d와 %d의 합은 %d\n", numA, numB, numC);
+
+	float numD = 3.14;
+	float numE = 2.2;
+	printf("%f와 %f의 차는 %f\n", numD, numE, numD - numE); // 연산 결과를 변수에 저장하지 않고 바로 출력이 가능하다.
+
+	int numG = 12;
+	int numH = 5;
+	int numI = numG * numH;
+	printf("%d와 %d의 곱은 %d\n", numG, numH, numG * numH);
+}
