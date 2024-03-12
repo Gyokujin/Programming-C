@@ -1,0 +1,24 @@
+#include <iostream>
+
+int main(void)
+{
+	int numA = 0; // int는 4바이트
+	numA = 3 + 4;
+
+	int a = 3; // 변수 : 메모리에 값을 넣는다.
+	float b = 1.0;
+	char c = 'x';
+
+	printf("%d\n", numA);	
+	printf("%d %f %c\n", a, b, c);
+
+	int d, e;
+	d = 3;
+	e = 10;
+	int x = d + e;
+
+	printf("%d + %d = %d\n", d, e, x);
+	printf("%s", "S");
+
+	return numA;
+}
