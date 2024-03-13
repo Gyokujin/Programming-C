@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+	int x = 8;
+	int y = 14;
+	int z = x > y ? x : y; // 조건(삼항) 연산자 : ?를 기준으로 좌측의 조건을 비교하며 참이면 ? 우측의 첫번째 값, 거짓이면 두번째 값을 반환한다.
+	printf("%d\n", z);
+
+	int numA;
+	int numB;
+
+	printf("첫번째 값을 입력하세요. ");
+	scanf_s("%d", &numA);
+	printf("두번째 값을 입력하세요. ");
+	scanf_s("%d", &numB);
+
+	printf("%d와 %d 중 %d가 더 큽니다.\n", numA, numB, numA > numB ? numA : numB);
+}
