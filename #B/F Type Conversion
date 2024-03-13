@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+	int x, y;
+	x = 7;
+	y = 4;
+	printf("%d / %d = %f\n", x, y, (float)x / y); // 형변환 = int 자료를 float으로 변경 하였다.
+
+	float z;
+	printf("%f\n", (float)6 / 3);
+
+	int a;
+	printf("%d\n", (int)x + y); // float => int 형변환도 가능하다.
+
+	return 0;
+}
