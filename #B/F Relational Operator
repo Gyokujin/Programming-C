@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+	int x = 4;
+	int y = 5;
+
+	x = y; // y 값을 x에 대입한다. 우항의 값을 좌항에 대입
+	printf("%d\n", x == y); // 참. 두 같이 같은지 비교한다. 같을 경우 참 다를 경우 거짓을 반환한다.
+	// int의 경우 참이면 1 거짓이면 0을 반환한다. bool의 경우 참이면 true 거짓이면 false
+
+	printf("%d\n", x != y); // 거짓. 두 같이 다르면 참, 같으면 거짓을 반환
+	
+	y = 6;
+	printf("%d\n", x != y); // 참
+
+	printf("%d\n", x < y); // 참. y가 x보다 큰지 비교
+	printf("%d\n", x >= y); // 거짓. x가 y보다 크거나 같은지 비교 
+}
