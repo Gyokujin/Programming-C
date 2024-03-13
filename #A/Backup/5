@@ -1,0 +1,50 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main(void)
+{
+	int correct = 0;
+
+	printf("사칙연산 기호를 입력하세요. ex) +, -, *, /, % \n");
+	char symbol;
+	scanf("%c", &symbol);
+
+	printf("첫번째 숫자를 입력하세요. ");
+	int numA;
+	scanf("%d", &numA);
+
+	printf("두번째 숫자를 입력하세요. ");
+	int numB;
+	scanf("%d", &numB);
+
+	switch (symbol)
+	{
+	case '+':
+		correct = numA + numB;
+		printf("두 수의 합은 ");
+		break;
+
+	case '-':
+		correct = numA - numB;
+		printf("두 수의 차는 ");
+		break;
+
+	case '*':
+		correct = numA * numB;
+		printf("두 수의 곱은 ");
+		break;
+
+	case '/':
+		correct = numA / numB;
+		printf("두 수를 나눈 몫은 ");
+		break;
+
+	case '%':
+		correct = numA % numB;
+		printf("두 수를 나눈 나머지는 ");
+		break;
+	}
+
+	printf("%d\n", correct);
+	return 0;
+}
