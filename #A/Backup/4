@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+	/*int x = 0;
+	int y = 0;
+
+	printf("첫번째 값을 입력하세요. ");
+	scanf_s("%d", &x);
+
+	printf("두번째 값을 입력하세요. ");
+	scanf_s("%d", &y);
+
+	printf("큰수는 %d 입니다.\n", x > y ? x : y);
+	printf("작은수는 %d 입니다.\n", x > y ? y : x);*/
+
+	int numA = 0;
+	int numB = 0;
+
+	printf("화씨 온도를 입력하세요. ");
+	scanf_s("%d", &numA);
+
+	numB = 5 * (numA - 32) / 9;
+	printf("화씨 온도는 %d 섭씨 온도는 %d 입니다.\n", numA, numB);
+}
