@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()
+{
+	int x = 0;
+	x++;
+
+	printf("%d\n", x);
+	printf("%d\n", x++);
+	printf("%d\n", x);
+
+	x += 1; // x = x + 1
+	
+	int numA = 5;
+	int numB = 2;
+	numA *= numB;
+
+	printf("%d\n", numA);
+
+	return 0;
+}
