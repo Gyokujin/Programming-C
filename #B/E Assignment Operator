@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main()
+{
+	int numA = 0;
+	int numB = 0;
+	int numC = 0;
+
+	printf("첫번째 숫자를 입력하세요. ");
+	scanf_s("%d", &numA);
+
+	printf("두번째 숫자를 입력하세요. ");
+	scanf_s("%d", &numB);
+
+	numC += numA; // numC = numC + numA와 같다.
+	numC += numB;
+	printf("두 수의 합은 %d\n", numC);
+
+	numC -= 5; // numC = numC - 5와 같다.
+	printf("%d\n", numC);
+
+	numC *= 2; // numC = numC * 2와 같다.
+	printf("%d\n", numC);
+
+	numC /= 2; // numC = numC / 2와 같다.
+	printf("%d\n", numC);
+
+	numC %= 3; // numC = numC % 3와 같다.
+	printf("%d\n", numC);
+}
