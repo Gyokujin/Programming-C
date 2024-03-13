@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main()
+{
+	int x = 1;
+	x++; // 2, x = x + 1과 같다.
+
+	printf("%d\n", x); // 2
+	printf("%d\n", ++x); // 3 전위 연산. 연산을 먼저 하고 명령을 처리한다.
+	printf("%d\n", x++); // 3 후위 연산. 명령을 처리하고 연산을 한다.
+	printf("%d\n", x); // 4
+
+	x--; // 2, x = x - 1과 같다.
+	printf("%d\n", x); // 3
+	printf("%d\n", --x); // 2
+	printf("%d\n", x--); // 2
+	printf("%d\n", x); // 1
+}
