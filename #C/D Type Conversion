@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main()
+{
+	int x, y;
+
+	x = 1;
+	y = 2;
+	float z = 1.5;
+
+	printf("%f\n", (float)x / z); // 명시적 형변환 : 다른 자료형으로 변형하도록 직접 명령한다.
+}
