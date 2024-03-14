@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+	// 3. 사용자로부터 입력 받은 하나의 상수를 제곱하여 출력하라.
+
+	int x;
+
+	printf("정수 1개를 입력해 주세요. : ");
+	scanf_s("%d", &x);
+
+	int xX = x * x;
+
+	printf("해당 수의 제곱은 %d\n", xX);
+}
