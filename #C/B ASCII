@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+	// 한글자의 문자는 고유의 번호를 갖고 있는데 이를 아스키 코드라고 한다. 아스키 코드는 특히 문자의 대소문자 구분에 이용된다.
+	char a = 'A'; // 65
+	char b = 'B'; // 66
+
+	const char* c = "ABCDE";
+	char d = 'Z';
+
+	printf("%d %d\n", a, b); // 이처럼 아스키 코드를 이용해 숫자로 표현 가능하다
+	printf("%s", c);
+
+	if (d >= 65 && a <= 90) 
+	{
+		printf("%d는 대문자입니다.\n", d);
+	}
+	else
+	{
+		printf("%d는 소문자입니다.\n", d);
+	}
+}
