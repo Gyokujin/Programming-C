@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()
+{
+	double x = 0;
+	x = 655444444462;
+
+	int y = x; // 이처럼 해당 자료형의 범위를 넘는 값을 넣어 생기는 오류를 오버 플로우(Overflow)라고 한다.
+	printf("%d", y); // 반대로 최소값보다 낮은 경우는 언더플로우(Underflow)라고 한다.
+
+	float hpMax = 900000000000000;
+	float hp; // int 자료형에 정해진 범위를 넘은 값을 대입 할 경우 오버 플로우가 나타난다.
+
+	hp = hpMax;
+
+	if (hp > hpMax) // 다음과 같이 한계치를 정해두어 사전에 막을수 있다.
+	{
+		hp = hpMax;
+	}
+	else if (hp < 0)
+	{
+		hp = 0;
+	}
+}
