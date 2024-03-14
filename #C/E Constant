@@ -1,0 +1,12 @@
+#include <stdio.h>
+#define lightSpeed 300000 //define : 상수를 문자로 정의 가능하다
+#define distance 149600000
+
+int main()
+{
+	float time = distance / lightSpeed; // 기호 상수 : 임의의 상수를 선언후 필요에 따라 호출하여 사용 가능하다.
+
+	int minute = time / 60;
+	int second = (int)time % 60;
+	printf("걸리는 시간은 %d분 %d초입니다.", minute, second);
+}
