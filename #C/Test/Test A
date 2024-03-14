@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+	// 1. 사용자로부터 입력 받은 2개의 정수로 뺄셈과 곱셈을 결과를 출력하라.
+	int numA = 0;
+	int numB = 0;
+
+	printf("첫번째 정수를 입력하세요. ");
+	scanf_s("%d", &numA);
+
+	printf("두번째 정수를 입력하세요. ");
+	scanf_s("%d", &numB);
+
+	printf("두 수의 합은 %d\n", numA);
+	printf("두 수의 차는 %d\n", numA > numB ? numA - numB : numB - numA);
+}
