@@ -1,0 +1,66 @@
+#include <stdio.h>
+// A : 90 ~ 100
+// B : 80 ~ 89
+// C : 60 ~ 79
+// D : 40 ~ 59
+// F : 0 ~ 39
+
+int main()
+{
+	int point = 0;
+	char grade = ' ';
+
+	printf("당신의 성적을 입력하세요. ");
+	scanf_s("%d", &point);
+
+	if (point > 100)
+	{
+		printf("100점이 만점입니다.");
+	}
+	else if (point >= 90)
+	{
+		grade = 'A';
+	}
+	else if (point >= 80)
+	{
+		grade = 'B';
+	}
+	else if (point >= 60)
+	{
+		grade = 'C';
+	}
+	else if (point >= 40)
+	{
+		grade = 'D';
+	}
+	else if (point >= 0)
+	{
+		grade = 'F';
+	}
+	else
+	{
+		printf("0 이상의 숫자를 입력하세요.");
+	}
+
+	if (grade != ' ')
+	{
+		switch (grade)
+		{
+		case 'A':
+			printf("아주 잘했습니다. A군요.");
+			break;
+		case 'B':
+			printf("잘했습니다. B입니다.");
+			break;
+		case 'C':
+			printf("아쉽군요. C입니다.");
+			break;
+		case 'D':
+			printf("분발하세요. D입니다.");
+			break;
+		case 'F':
+			printf("F입니다. 제대로 공부해오세요.");
+			break;
+		}
+	}
+}
