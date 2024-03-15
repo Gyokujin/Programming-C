@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+int main()
+{
+    int x, y, z;
+    char op;
+    float zF;
+    bool onAble = true;
+
+    printf("수식을 입력해 주세요 ");
+    scanf("%d %c %d", &x, &op, &y);
+
+    if (op == '+')
+    {
+        z = x + y;
+    }
+    else if (op == '-')
+    {
+        z = x - y;
+    }
+    else if (op == '*')
+    {
+        z = x * y;
+    }
+    else if (op == '/')
+    {
+        zF = (float)x / y;
+    }
+    else if (op == '%')
+    {
+        z = x % y;
+    }
+    else
+    {
+        printf("지원하지 않는 연산자를 입력하셨습니다.\n");
+        onAble = false;
+    }
+
+    if (!onAble)
+        return 0;
+
+    if (op == '+' || op == '-' || op == '*' || op == '%')
+    {
+        printf("%d %c %d = %d", x, op, y, z);
+    }
+    else
+    {
+        printf("%d %c %d = %f", x, op, y, zF);
+    }
+}
