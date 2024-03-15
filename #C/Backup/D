@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main()
+{
+	int number = 0;
+	printf("정수를 입력하시오. ");
+	scanf_s("%d", &number);
+
+	switch (number)
+	{
+	case 0:
+		printf("없어요\n");
+		break;
+	case 1:
+		printf("작아요\n");
+		break;
+	case 2:
+		printf("작아요\n");
+		break;
+	case 3:
+		printf("비슷해요\n");
+		break;
+	case 4:
+		printf("맞아요\n");
+		break;
+	case 5:
+		printf("커요\n");
+		break;
+	default:
+		printf("너무 벗어났어요.\n");
+		break;
+	}
+}
