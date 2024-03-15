@@ -1,0 +1,8 @@
+#include <iostream>
+
+int main()
+{
+	printf("%8d %8d\n", 10, 10); // % d 사이의 숫자로 정렬이 가능하다.
+	printf("%-8d %-8d\n", 10, 10);
+	printf("%+8d %+8d\n", 10, 10);
+}
