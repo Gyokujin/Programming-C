@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main()
+{
+	// 섭씨 온도를 입력 받아, 화씨 온도로 바꾸어 출력하라.
+	// 화씨온도 = 9 * 섭씨온도 / 5 + 32
+
+	float num;
+	printf("섭씨 온도를 입력해 주세요 : ");
+	scanf_s("%f", &num);
+
+	float correct = 9 * num / 5 + 32;
+	printf("섭씨 %f도는 화씨 %f도 입니다.", num, correct);
+}
