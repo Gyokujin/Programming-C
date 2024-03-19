@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+// 과목의 성적을 입력해서, 전체 성적의 평균을 계산해 출력하라. 단, 성적을 입력할 과목 수도 사용자에 의해 결정될 수 있도록 하라.
+
+int main()
+{
+	int num = 0;
+	int sum = 0;
+	int average = 0;
+
+	printf("몇개의 성적을 입력 하겠습니까? ");
+	scanf_s("%d", &num);
+
+	for (int i = 0; i < num; i++)
+	{
+		int point = 0;
+		printf("%d번째 성적을 입력하세요. ", i + 1);
+		scanf_s("%d", &point);
+		sum += point;
+	}
+
+	average = sum / num;
+	printf("%d개 과목의 총점은 %d, 평균 점수는 %d 입니다\n.", num, sum, average);
+	return average;
+}
