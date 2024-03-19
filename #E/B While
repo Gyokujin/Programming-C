@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main()
+{
+	int i = 0;
+
+	while (i < 10) 
+	{
+		printf("%d\n", i++);
+	}
+
+	printf("%d\n", i); // i가 10보다 작다는 조건이 참이 되었기 때문에 반복문이 종료되었다.
+}
