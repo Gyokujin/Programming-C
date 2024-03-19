@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+    int random = 0;
+    int correct = -1;
+    random = rand() % 100; // rand : 난수를 출력하기 위해 사용한다.
+
+    while (correct != random)
+    {
+        printf("0에서 100까지의 숫자중 하나를 입력하세요! ");
+        scanf_s("%d", &correct);
+
+        if (correct == random)
+        {
+            printf("정답입니다! 숫자는 %d 입니다.\n", correct);
+        }
+        else if (correct > random)
+        {
+            printf("정답은 %d보다 작습니다.\n", correct);
+        }
+        else
+        {
+            printf("정답은 %d보다 큽니다.\n", correct);
+        }
+    }
+}
