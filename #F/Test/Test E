@@ -6,9 +6,9 @@ int main()
 {
 	int num = 0;
 	int sum = 0;
-	int average = 0;
+	float average = 0;
 
-	printf("몇개의 성적을 입력 하겠습니까? ");
+	printf("몇 개의 성적을 입력 하겠습니까? ");
 	scanf_s("%d", &num);
 
 	for (int i = 0; i < num; i++)
@@ -19,7 +19,7 @@ int main()
 		sum += point;
 	}
 
-	average = sum / num;
-	printf("%d개 과목의 총점은 %d, 평균 점수는 %d 입니다\n.", num, sum, average);
+	average = (float)sum / num;
+	printf("%d개 과목의 총점은 %d, 평균 점수는 %.2f 입니다\n.", num, sum, average);
 	return average;
 }
