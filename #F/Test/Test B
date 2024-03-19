@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+// 두 개의 정수를 입력 받아, 두 수의 차를 출력하라. 반드시 큰 수에서 작은 수를 뺀 결과가 나와야 한다.
+
+int main()
+{
+	int numA = 0;
+	int numB = 0;
+
+	printf("첫번째 숫자를 입력하세요. ");
+	scanf_s("%d", &numA);
+
+	printf("두번째 숫자를 입력하세요.");
+	scanf_s("%d", &numB);
+
+	int correct = 0;
+	if (numA >= numB)
+	{
+		correct = numA - numB;
+		printf("%d - %d = %d 입니다.", numA, numB, correct);
+	}
+	else
+	{
+		correct = numB - numA;
+		printf("%d - %d = %d 입니다.", numB, numA, correct);
+	}
+
+	return correct;
+}
