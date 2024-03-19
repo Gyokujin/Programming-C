@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+// 구구단을 출력하되, 2,4,6,8단만 출력하라. 단, 2단은 2x2까지 4단은 4x4까지 6단은 6x6까지 8단은 8x8까지만 출력하라.
+
+int main()
+{
+	for (int i = 2; i <= 8; i = i + 2)
+	{
+		for (int j = 1; j <= i; j++)
+		{
+			printf("%d x %d = %d\n", i, j, i * j);
+		}
+	}
+}
