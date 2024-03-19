@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main()
+{	
+	for (int i = 10; i > 0; i--) // for문의 내용을 필요에 따라 수정하며 알아볼 수 있게 하는것이 중요하다.
+	{
+		printf("반성문\n");
+	}
+}
