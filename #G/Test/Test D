@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+// 초 를 입력 받아서 시:분:초 형태로 출력하기
+
+void TimeSetting(int timeNum)
+{
+	int hour = 0;
+	int minute = 0;
+	int second = 0;
+
+	int temp = timeNum / 60;
+	hour = temp / 60;
+	minute = temp % 60;
+	second = timeNum % 60;
+
+	printf("%d초는 %d시 %d분 %d초로 표현 가능합니다.", timeNum, hour, minute, second);
+}
+
+int main()
+{
+	int input = 0;
+	printf("시간을 정의할 초를 입력하세요. ");
+	scanf_s("%d", &input);
+	TimeSetting(input);
+}
