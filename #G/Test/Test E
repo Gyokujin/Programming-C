@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+// 3개의 정수를 입력받아 가장 작은 수 표시
+
+int MinNum(int a, int b, int c)
+{
+	int correct = 0;
+
+	if (a < b)
+	{
+		correct = a < c ? a : c;
+	}
+	else if (a > b)
+	{
+		correct = b < c ? b : c;
+	}
+	else if (b < c)
+	{
+		correct = a < b ? a : b;
+	}
+
+	return correct;
+}
+
+void main()
+{
+	int numA, numB, numC;
+
+	printf("3개의 정수를 입력하세요. ");
+	scanf_s("%d %d %d", &numA, &numB, &numC);
+
+	int correct = MinNum(numA, numB, numC);
+	printf("%d, %d, %d 중 가장 작은 값은 %d 입니다.", numA, numB, numC, correct);
+}
