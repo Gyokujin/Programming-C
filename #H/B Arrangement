@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main()
+{
+	int s[10]; // 배열은 다음과 같이 선언한다.
+	int sum = 0;
+
+	for (int i = 0; i < 10; i++) 
+	{
+		printf("%d번째 점수를 입력하세요. ", i + 1);
+		scanf_s("%d", &s[i]);
+		sum += s[i];
+	}
+
+	int correct = sum / 10;
+	printf("총점은 %d, 평균은 %d 입니다.", sum, correct);
+	return correct;
+}
