@@ -1,0 +1,21 @@
+#include <stdio.h>
+#define STUDENT 5
+
+int main()
+{
+	int score[STUDENT] = { 30,20,10,40,50 };
+
+	for (int i = 0; i < STUDENT; i++)
+	{
+		printf("%d번 학생 전투력: ", i + 1);
+
+		for (int j = 0; j < score[i]; j++)
+		{
+			printf("*");
+		}
+
+		printf("\n");
+	}
+
+	return 0;
+}
