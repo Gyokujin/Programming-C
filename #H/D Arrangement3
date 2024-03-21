@@ -19,3 +19,11 @@ int main()
 
 	return 0;
 }
+
+    void AllOff() // 배열을 사용하면 다음과 같이 for을 유용하게 사용 할 수 있다.
+    {
+        for (int i = 0; i < objs.Length; i++)
+        {
+            objs[i].SetActive(false);
+        }
+    }
