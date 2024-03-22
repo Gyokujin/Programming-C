@@ -1,0 +1,47 @@
+#include <stdio.h> 
+#include <time.h>
+#include <stdlib.h>
+#define COUNT 10
+
+int main()
+{
+    int votes[COUNT] = { 0 };
+
+    while (true)
+    {
+        printf("몇 번 후보자에게 투표 하시겠습니까? 1 ~ 10중에 입력해주세요. (-1을 입력시 투표가 종료됩니다.) ");
+
+        int num = 0;
+        scanf_s("%d", &num);
+        
+        if (num == -1)
+        {
+            printf("\n투표를 종료합니다.\n");
+            break;
+        }
+        else if (num > 0 && num <= 10)
+        {
+            printf("%d번 후보에게 투표 하였습니다.\n", num);
+            votes[num - 1]++; // 배열은 0부터 세기 때문에 -1 자리에 투표를 한다.
+        }
+        else
+        {
+            printf("1 ~ 10번 사이의 숫자를 입력해주세요.\n");
+        }
+    }
+
+    int maxVoteNum = 0;
+    int maxVote = 0;
+
+    for (int i = 0; i < COUNT; i++)
+    {
+        if (votes[i] > maxVote)
+        {
+            maxVoteNum = votes[i];
+            maxVote = i + 1; // 배열은 0부터 세기 때문에 다시 +1한 번호로 저장한다.
+        }
+    }
+
+    printf("%d번 후보가 최다득표인 %d표로 당선되었습니다!", maxVote, maxVoteNum);
+    return 0;
+}
