@@ -1,0 +1,7 @@
+#include <stdio.h>
+
+int main()
+{
+	char word1[4] = "ASD"; // 배열의 크기 -1 => 글자수
+	printf("%s\n", word1);
+}
