@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+// 7개의 정수를 입력하고 큰수부터 순서대로 정렬하라
+
+int main()
+{
+	int numbers[7];
+
+	for (int i = 0; i < 7; i++)
+	{
+		printf("%d번째 숫자를 입력하세요. ", i + 1);
+		scanf_s("%d", &numbers[i]);
+	}
+
+	for (int i = 0; i < 6; i++)
+	{
+		for (int j = i + 1; j < 7; j++)
+		{
+			if (numbers[i] < numbers[j])
+			{
+				int temp = numbers[i];
+				numbers[i] = numbers[j];
+				numbers[j] = temp;
+			}
+		}
+	}
+
+	printf("\n정렬후\n");
+
+	for (int i = 0; i < 7; i++)
+	{
+		printf("%d\n", numbers[i]);
+	}
+}
