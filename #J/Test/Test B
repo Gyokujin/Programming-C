@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main()
+{
+	int array[10];
+	int front = 0;
+	int back = 9;
+	int input;
+
+	printf("총 10개 정수를 입력해 주세요.\n");
+
+	for (int i = 0; i < 9; i++)
+	{
+		printf("%d번째 입력 : ", i + 1);
+		scanf_s("%d", &input);
+
+		if (input % 2 == 0)
+		{
+			array[back] = input;
+			back--;
+		}
+		else
+		{
+			array[front] = input;
+			front++;
+		}
+	}
+
+	printf("입력한 정수들 ");
+
+	for (int i = 0; i < 10; i++) 
+	{
+		printf("%4d", array[i]);
+	}
+}
