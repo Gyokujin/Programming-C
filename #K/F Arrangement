@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+	int arr[3] = { 1,2,3 };
+	int* parr;
+
+	parr = arr; // parr = &arr[0] 과 동일하다.
+
+	printf("arr[1] : %d \n", arr[1]);
+
+	printf("parr[0] : %d \n", &parr[0]);
+	printf("parr[1] : %d \n", &parr[1]);
+	printf("parr[2] : %d \n", &parr[2]);
+	printf("parr : %d \n", &parr);
+}
