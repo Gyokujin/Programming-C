@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()
+{
+	int i = 10;
+	int* p = &i;
+
+	printf("i = %d\n", i);
+	printf("&i = %d\n", p);
+
+	int x = 3;
+	int y = 6;
+	int z = 9;
+
+	int* xP = &x;
+	int* yP = &y;
+	int* zP = &z;
+
+	printf("x의 값은 %d 포인터는 %d\n", x, &x);
+	printf("x의 값은 %d 포인터는 %d\n", x, xP);
+
+	printf("y의 값은 %d\n", y);
+	printf("z의 값은 %d\n", z);
+}
