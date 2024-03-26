@@ -1,0 +1,23 @@
+#include <iostream>
+
+int main()
+{
+	int i = 2000;
+	int* p; // 포인터 선언
+	p = &i; // p 포인터에 i 변수를 연결
+
+	printf("p: %d\n", p);
+	printf("&i : %d\n", &i);
+	printf("%d\n", i);
+
+	(*p)++;
+
+	printf("&i : %d\n", &i);
+	printf("p: %d\n", p);
+
+	printf("%d\n", i);
+	printf("%d\n", p);
+	printf("%d", * p);
+
+	return 0;
+}
