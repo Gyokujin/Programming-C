@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()
+{
+	int x = 10, y = 20;
+	int* p;
+
+	p = &x;
+	printf("p = %d\n", p); // 포인터만 호출하면 해당 주소를 의미
+	printf("*p = %d\n\n", *p); // *은 포인터가 가르키는 값
+
+	p = &y;
+	printf("p = %d\n", p);
+	printf("*p = %d\n\n", *p);
+
+	p = &x;
+	printf("p = %d\n", p);
+	printf("*p = %d\n\n", *p);
+
+	return 0;
+}
