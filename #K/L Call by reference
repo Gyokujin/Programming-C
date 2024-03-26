@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+void Swap(int* aP, int* bP) 
+{
+	int temp = *aP; 
+	*aP = *bP; // 각 매개변수의 주소를 서로 바꿔 값 또한 바꾼다.
+	*bP = temp;
+}
+
+int main()
+{
+	int x = 10;
+	int y = 20;
+
+	printf("Before swap: x = %d, y = %d\n", x, y);
+	Swap(&x, &y);
+
+	printf("After swap: x = %d, y = %d\n", x, y);
+}
