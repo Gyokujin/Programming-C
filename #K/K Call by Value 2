@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+void Swap(int a, int b) 
+{
+	int temp = a;
+	a = b;
+	b = temp;
+}
+
+int main()
+{
+	int x = 10;
+	int y = 20;
+
+	printf("Before swap: x = %d, y = %d\n", x, y);
+	Swap(x, y);
+	printf("Before swap: x = %d, y = %d\n", x, y); // 일반적으로 매개변수로 보낸 값과 기존의 값은 별개의 값이기 때문에 서로 다른 변수로 취급된다. 때문에 값이 변경되지 않는다.
+
+	return 0;
+}
