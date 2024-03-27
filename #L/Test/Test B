@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+// 2개 정수의 합과 차를 동시에 반환하는 함수를 포인터를 사용하여 작성하라.
+
+void Correct(int* numA, int* numB)
+{
+	int sum = *numA + *numB;
+	printf("두 수의 합은 %d ", sum);
+
+	int sub = *numA - *numB > 0 ? *numA - *numB : *numB - *numA;
+	printf("두 수의 차는 %d", sub);
+}
+
+int main()
+{
+	int a = 0;
+	int b = 0;
+
+	scanf_s("%d", &a);
+	scanf_s("%d", &b);
+	printf("\n");
+	Correct(&a, &b);
+}
