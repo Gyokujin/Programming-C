@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+// 정수 배열 A[]를 다른 정수 배열 B[] 에 복사하는 함수를 작성하고 테스트하라.
+void Swap(int numA, int *numB)
+{
+	*numB = numA;
+}
+
+int main()
+{
+	int arrA[5];
+	int arrB[5];
+
+	for (int i = 0; i < 5; i++)
+	{
+		scanf_s("%d", &arrA[i]);
+	}
+
+	for (int i = 0; i < 5; i++)
+	{
+		Swap(arrA[i], &arrB[i]);
+	}
+
+	for (int i = 0; i < 5; i++)
+	{
+		printf("%d\n", arrA[i]);
+	}
+}
