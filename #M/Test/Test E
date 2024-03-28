@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void Swap(int* a, int* b, int* c)
+{
+	int temp;
+	temp = *a;
+	*a = *c;
+	*c = *b;
+	*b = temp;
+}
+
+// a = 10, b = 20, c = 30 이렇게 입력되어 있는 변수의 값을 a = 30, b = 10, c = 20으로 바꾸어라.
+int main()
+{
+	int a = 10;
+	int b = 20;
+	int c = 30;
+	printf("%d %d %d\n", a, b, c);
+
+	Swap(&a, &b, &c);
+	printf("%d %d %d\n", a, b, c);
+}
