@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+// 배열에 값을 저장하고 홀수/짝수를 구분해주는 함수를 작성한다.
+int main()
+{
+	int numbers[10];
+
+	for (int i = 0; i < 10; i++)
+	{
+		scanf_s("%d", &numbers[i]);
+	}
+
+	for (int i = 0; i < 10; i++)
+	{
+		printf("%d번째 숫자인 %d는 ", i + 1, numbers[i]);
+
+		if (numbers[i] % 2 == 0)
+		{
+			printf("짝수\n");
+		}
+		else
+		{
+			printf("홀수\n");
+		}
+	}
+}
