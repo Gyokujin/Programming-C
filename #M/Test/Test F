@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+// 2개의 정수를 입력 받아서 배열에 저장한 뒤, 배열 내에 저장된 두 값을 서로 바꿔주자. 단, 두 개의 값을 서로 바꿔주는 것은 함수로 분리하여 처리하자.
+void Swap(int *numA, int *numB)
+{
+	int temp = *numA;
+	*numA = *numB;
+	*numB = temp;
+}
+
+int main()
+{
+	int arr[2];
+	scanf_s("%d %d", &arr[0], &arr[1]);
+	printf("%d %d\n", arr[0], arr[1]);
+
+	Swap(&arr[0], &arr[1]);
+
+	printf("%d %d\n", arr[0], arr[1]);
+}
