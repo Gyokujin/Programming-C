@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void PrintData(char* charName, char* monsterName)
+{
+	printf("\n 캐릭터의 이름은 : %s\n", charName);
+	printf("\n 캐릭터의 이름은 : %s\n", monsterName);
+}
+
+int main()
+{
+	char characterName[100];
+	char monsterName[100];
+
+	printf("몬스터의 이름을 입력하세요. : ");
+	scanf("%s", &monsterName);
+
+	printf("캐릭터의 이름을 입력하세요. : ");
+	scanf("%s", &characterName);
+
+	PrintData(characterName, monsterName);
+	// PrintData(monsterName, monsterName);
+}
