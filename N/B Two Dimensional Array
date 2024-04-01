@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+	int numbers[4][2]; // 4층짜리 건물에 2 가구씩 거주중
+	int sumNum = 0;
+
+	for (int i = 0; i < 4; i++)
+	{
+		printf("%d층 건물의 인구를 조사합니다.\n", i + 1);
+
+		for (int j = 0; j < 2; j++)
+		{
+			int num = 0;
+			printf("%d번째 가구의 인원을 입력하세요. ", j + 1);
+			scanf_s("%d", &numbers[i][j]);
+			sumNum += numbers[i][j];
+		}
+	}
+
+	printf("\n총 인원은 %d명 입니다.\n", sumNum);
+}
