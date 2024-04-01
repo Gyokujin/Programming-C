@@ -1,0 +1,105 @@
+#include <stdio.h>
+#define LengthX 3
+#define LengthY 3
+#define WinScore 3
+
+// 틱택토 게임을 제작해보시오. 예시
+// ---|---|---
+//  x | O | X
+// ---|---|---
+//  O | X | O
+// ---|---|---
+//  X | O | X
+// ---|---|---
+
+void ShowScreen(char board[3][3])
+{
+	printf("\n");
+	printf("---|---|---\n");
+	printf(" %c | %c | %c \n", board[0][0], board[1][0], board[2][0]);
+	printf("---|---|---\n");
+	printf(" %c | %c | %c \n", board[0][1], board[1][1], board[2][1]);
+	printf("---|---|---\n");
+	printf(" %c | %c | %c \n", board[0][2], board[1][2], board[2][2]);
+	printf("---|---|---\n");
+}
+
+bool GameCheck(char player, char board[3][3])
+{
+	bool end = false;
+
+	if ((player == board[0][0] && player == board[0][1] && player == board[0][2]) || // 가로 한줄
+		(player == board[1][0] && player == board[1][1] && player == board[1][2]) ||
+		(player == board[2][0] && player == board[2][1] && player == board[2][2]) ||
+		(player == board[0][0] && player == board[1][0] && player == board[2][0]) || // 세로 한줄
+		(player == board[0][1] && player == board[1][1] && player == board[2][1]) ||
+		(player == board[0][2] && player == board[1][2] && player == board[2][2]) ||
+		(player == board[0][0] && player == board[1][1] && player == board[2][2]) || // 대각선
+		(player == board[0][2] && player == board[1][1] && player == board[2][0]))
+	{
+		ShowScreen(board);
+		printf("\n빙고! %c의 승리입니다!! 축하합니다. \n", player);
+		end = true;
+	}
+
+	return end;
+}
+
+int main()
+{
+	char board[LengthX][LengthY];
+	int count = 0;
+	int x = 0;
+	int y = 0;
+	char player = 'X';
+	bool gameEnd = false;
+
+	for (int i = 0; i < LengthX; i++)
+	{
+		for (int j = 0; j < LengthY; j++)
+		{
+			board[i][j] = ' ';
+		}
+	}
+
+	printf("틱택토를 시작합니다.\n");
+
+	do
+	{
+		printf("\n%c 플레이어의 차례입니다.\n", player);
+		ShowScreen(board);
+		printf("\n%c를 놓을 좌표를 입력하세요. ex : 1 0, \n", player);
+		scanf("%d %d", &x, &y);
+
+		if (x < 0 || x >= LengthX || y < 0 || y >= LengthY)
+		{
+			printf("\n배치할 수 없는 좌표입니다. 다시 입력하세요!\n");
+			continue;
+		}
+		else if (board[x][y] != ' ')
+		{
+			printf("\n이미 배치되어 있는 좌표입니다. 다시 입력하세요!\n");
+			continue;
+		}
+		else
+		{
+			if (player == 'X')
+			{
+				board[x][y] = 'X';
+				gameEnd = GameCheck(player, board);
+				player = 'O';
+			}
+			else
+			{
+				board[x][y] = 'O';
+				gameEnd = GameCheck(player, board);
+				player = 'X';
+			}
+
+			if (gameEnd)
+				break;
+
+			count++;
+		}
+	} while (count < 9);
+}
