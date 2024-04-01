@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+// 5명씩으로 구성된 3개의 학급 배열을 만드록, 배열에 각 학생들의 성적을 기록한 뒤, 학급별 평균 점수와 전체 학급의 평균 점수를 산출해 출력하라.
+int main()
+{
+	int points[3][5];
+	int totalSum[3];
+	int average[3];
+
+	for (int i = 0; i < 3; i++)
+	{
+		int total = 0;
+		printf("%d번째 반의 점수를 입력합니다.\n", i + 1);
+
+		for (int j = 0; j < 5; j++)
+		{
+			printf("%d번째 학생의 점수를 입력하세요.", j + 1);
+			scanf_s("%d", &points[i][j]);
+			total += points[i][j];
+		}
+
+		average[i] = total / 5;
+		printf("%d번째 반의 평균 점수는 %d\n", i + 1, average[i]);
+	}
+
+	int correct = (average[0] + average[1] + average[2]) / 3;
+	printf("전체 학급의 평균 점수는 %d 점입니다.", correct);
+}
