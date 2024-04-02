@@ -1,0 +1,22 @@
+#include <stdio.h>
+#define Student 3
+#define SubjectCount 2
+
+// 2차원 배열로 3명 학생의 영어와 수학 점수를 입력하고, 입력된 값을 출력하라.
+int main()
+{
+	int points[3][2];
+
+	for (int i = 0; i < Student; i++)
+	{
+		printf("\n%d번째 학생의 점수를 입력합니다.\n", i + 1);
+		
+		printf("영어 점수를 입력하세요. ");
+		scanf("%d", &points[i][0]);
+
+		printf("수학 점수를 입력하세요. ");
+		scanf("%d", &points[i][1]);
+
+		printf("%d번째 학생의 영어와 수학 점수는 각각 %d, %d 입니다.\n", i + 1, points[i][0], points[i][1]);
+	}
+}
