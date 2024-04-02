@@ -1,0 +1,34 @@
+#include <stdio.h>
+#define STAIRS 3
+#define HOUSES 2
+
+// 층마다 2개씩의 거주 공간이 있는 3층짜리 다세대 주택이 있다. 각 층 호실 별로 거주 중인 인원 수를 입력해 2차원 배열에 저장하고,
+// 함수를 통해 각 호실마다 1명씩의 인원을 추가한 뒤, 각 층 호실 별 인원 수를 출력하라.
+int main()
+{
+	int numbers[STAIRS][HOUSES];
+	
+	for (int i = 0; i < STAIRS; i++)
+	{
+		printf("\n%d층의 인원을 조사합니다.\n", i + 1);
+
+		for (int j = 0; j < HOUSES; j++)
+		{
+			printf("%d번 집의 인원을 조사합니다.\n", j + 1);
+			scanf_s("%d", &numbers[i][j]);
+			printf("인원을 한명 추가합니다.\n");
+			numbers[i][j]++;
+		}
+	}
+
+	for (int i = 0; i < STAIRS; i++)
+	{
+		printf("\n%d층의 인원을 안내합니다.\n", i + 1);
+
+		for (int j = 0; j < HOUSES; j++)
+		{
+			printf("%d번 집의 인원을 안내합니다.\n", j + 1);
+			printf("%d번 집의 인원은 %d명입니다.\n", j + 1, numbers[i][j]);
+		}
+	}
+}
