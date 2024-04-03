@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+struct Point
+{
+	int xPos;
+	int yPos;
+};
+
+struct Point list[] = { {-2, -3}, {3, 4} };
+
+// 2차원 공간에서 사각형은 2개의 점으로 이루어진다. 이 두점을 각 모서리로 하여 만든 사각형의 넓이를 출력하라
+int main()
+{
+	int width = list[1].xPos - list[0].xPos;
+	if (width < 0)
+		width *= -1;
+
+	int height = list[1].yPos - list[0].yPos;
+	if (height < 0)
+		height *= -1;
+
+	int area = width * height;
+	printf("두 점 (%d, %d) (%d, %d)을 가지고 있는 사각형의 넓이는 %d\n", list[0].xPos, list[0].yPos, list[1].xPos, list[1].yPos, area);
+}
