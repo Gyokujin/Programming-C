@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+struct Point
+{
+	int xPos;
+	int yPos;
+};
+
+struct Point list[] = { {5, 2}, {5, 2} };
+
+// 두 점의 좌표가 일치하면 1을 반환하고 그렇지 않으면 0을 반환하는 함수 int equual
+int main()
+{
+	Point point;
+
+	printf("첫번째 점의 좌표는 %d, %d\n", list[0].xPos, list[0].yPos);
+	printf("두번째 점의 좌표는 %d, %d\n\n", list[1].xPos, list[1].yPos);
+
+	if (list[0].xPos == list[1].xPos && list[0].yPos == list[1].yPos)
+	{
+		printf("%d\n", 1);
+	}
+	else
+	{
+		printf("%d\n", 0);
+	}
+}
