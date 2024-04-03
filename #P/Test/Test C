@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+// 2차원 벡터를 구조체로 정의하여 보라. 벡터 사이에는 덧셈 연산들이 정의될 수 있다. 벡터의 덧셈을 함수로 구현하고 테스트해보자.
+
+struct vector 
+{
+	float x;
+	float y;
+};
+
+int main()
+{
+	struct vector pointA;
+	struct vector pointB;
+
+	printf("A 포인트의 좌표를 입력하세요\n");
+	scanf_s("%f %f", &pointA.x, &pointA.y);
+
+	printf("B 포인트의 좌표를 입력하세요\n");
+	scanf_s("%f %f", &pointB.x, &pointB.y);
+
+	printf("두 벡터는 각각 (%f, %f), (%f, %f)\n", pointA.x, pointA.y, pointB.x, pointB.y);
+	printf("두 벡터의 합은 (%f, %f) 입니다.\n", pointA.x + pointB.x, pointA.y + pointB.y);
+}
