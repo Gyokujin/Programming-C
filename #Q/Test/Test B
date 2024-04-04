@@ -1,0 +1,131 @@
+#include <stdio.h>
+#include <string.h>
+#define MAX_BOOKS 100
+
+// 구조체를 활용해서 도서관 관리 프로그램을 작성합니다. 간단한 도서 정보(제목, 작가, 출판 연도)를 관리하고, 도서 추가, 삭제, 조회 기능을 제공합니다.
+struct Book
+{
+    char title[100];
+    char author[50];
+    int year;
+};
+
+struct Library 
+{
+    struct Book books[MAX_BOOKS];
+    int num_books;
+};
+
+void DisplaMenu()
+{
+    printf("\n도서 관리 시스템\n1. 도서 추가\n2.도서 삭제\n3.도서 출력\n4.종료\n메뉴 번호를 입력해 주세오 : ");
+}
+
+void AddBook(struct Library *library)
+{
+    if (library->num_books >= MAX_BOOKS)
+    {
+        printf("도서관이 가득 찼습니다.\n");
+        return;
+    }
+
+    printf("추가할 도서 제목을 입력하세요 : ");
+    scanf("%s", library->books[library->num_books].title);
+
+    printf("추가할 도서의 저자명을 입력하세요 : ");
+    scanf("%s", library->books[library->num_books].author);
+
+    printf("추가할 도서의 출판연도를 입력하세요 : ");
+    scanf("%d", &library->books[library->num_books].year);
+
+    library->num_books++;
+    printf("도서 추가를 완료했습니다.\n");
+}
+
+void DeleteBook(struct Library* library)
+{
+    if (library->num_books == 0)
+    {
+        printf("보유중인 도서가 없습니다.\n");
+        return;
+    }
+
+    printf("삭제할 도서명을 입력하세요 : ");
+
+    char searchTitle[100];
+    scanf("%s", &searchTitle);
+
+    int found = 0;
+
+    for (int i = 0; i < library->num_books; i++)
+    {
+        if (strcmp(searchTitle, library->books[i].title) == 0)
+        {
+            for (int j = i; j < library->num_books - 1; j++)
+            {
+                library->books[j] = library->books[j + 1];
+            }
+
+            library->num_books--;
+            printf("도서 삭제를 완료했습니다.\n");
+            found = 1;
+            break;
+        }
+    }
+
+    if (!found)
+        printf("삭제할 도서를 찾을수 없습니다.\n");
+}
+
+void DisplayBook(struct Library* library)
+{
+    if (library->num_books == 0)
+    {
+        printf("보유중인 도서가 없습니다.\n");
+        return;
+    }
+
+    printf("\n도서관 보유 도서 목록\n");
+
+    for (int i = 0; i < library->num_books; i++)
+    {
+        printf("제목 : %s, 저자 : %s, 출판연도 : %d\n", library->books[i].title, library->books[i].author, library->books[i].year);
+    }
+}
+
+int main()
+{
+    struct Library library;
+    library.num_books = 0;
+    int selection;
+
+    do
+    {
+        // 메뉴 출력
+        DisplaMenu();
+        scanf("%d", &selection);
+
+        switch (selection)
+        {
+            case 1:
+                AddBook(&library);
+                break;
+
+            case 2:
+                DeleteBook(&library);
+                break;
+
+            case 3:
+                DisplayBook(&library);
+                break;
+
+            case 4:
+                printf("프로그램 종료\n");
+                break;
+
+            default:
+                printf("1과 4 사이의 숫자를 입력 해주세요.");
+                break;
+        }
+    } while (selection != 4);
+}
